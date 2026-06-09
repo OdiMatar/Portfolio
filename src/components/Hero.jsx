@@ -27,10 +27,15 @@ export default function Hero() {
               <strong>Front-end</strong>
               <span>HTML • CSS • JS • React • Vue</span>
             </div>
+             <div className="stat">
+              <strong>Mobile</strong>
+              <span>Flutter • React Native</span>
+            </div>
             <div className="stat">
               <strong>Beschikbaar</strong>
               <span>Freelance / full-time / stages</span>
             </div>
+
           </aside>
         </div>
       </div>

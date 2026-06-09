@@ -40,14 +40,21 @@
             <div className="hero-cta hero-cta-about">
               <a
                 className="btn primary"
-                href="/cv.%20pdf"
+                href="/Odi_Matar_Cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Bekijk CV van Odi Matar"
               >
                 Bekijk CV
               </a>
-              <a className="btn" href="#contact">Stuur een bericht</a>
+              <a
+                className="btn"
+                href="/Odi_Matar_Cv.pdf"
+                download="Odi_Matar_Cv.pdf"
+                aria-label="Download CV van Odi Matar"
+              >
+                Download CV
+              </a>
             </div>
           </div>
         </div>
