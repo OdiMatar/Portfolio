@@ -4,33 +4,55 @@ export default function Skills() {
       <div className="container">
         <div className="section-header">
           <div>
-            <h2>Skills</h2>
-            <p>Ik heb ervaring met de onderstaande vaardigheden en tools, en ik leer graag nieuwe dingen.</p>
+            <h2>Ervaring</h2>
+            <p>Een duidelijk overzicht van mijn frontend, backend en technische ervaring.</p>
           </div>
         </div>
 
         <div className="skills-grid">
           <div className="skill-card">
-            <h3>Ervaring gehad</h3>
+            <h3>Frontend</h3>
             <ul>
-              <li>Linux</li>
-              <li>Docker</li>
+              <li>HTML5 en semantische pagina-opbouw</li>
+              <li>CSS3, responsive design en animaties</li>
+              <li>JavaScript voor interactieve interfaces</li>
+              <li>React componenten, state en API-data</li>
+              <li>Vue basiservaring</li>
               <li>Tailwind CSS</li>
+            </ul>
+          </div>
+
+          <div className="skill-card">
+            <h3>Backend</h3>
+            <ul>
+              <li>Laravel projecten met Blade views</li>
+              <li>PHP basis en MVC-structuur</li>
+              <li>SQL databases en datamodellen</li>
+              <li>API-integraties en data ophalen</li>
+              <li>Deployment ervaring op een VPS</li>
+              <li>Docker basiservaring</li>
+            </ul>
+          </div>
+
+          <div className="skill-card">
+            <h3>Tools en werkwijze</h3>
+            <ul>
+              <li>Git en GitHub</li>
+              <li>Linux basis</li>
               <li>Oracle VirtualBox</li>
-              <li>Git</li>
-              <li>Unity</li>
-              <li>Cisco Networking</li>
-              <li>Agile</li>
-              <li>Flutter</li>
+              <li>Agile samenwerken</li>
+              <li>Cisco Networking basis</li>
+              <li>Unity basiservaring</li>
+              <li>Flutter voor mobile development</li>
             </ul>
           </div>
 
           <div className="skill-card">
             <h3>Talen</h3>
             <ul>
-              <li>Arabisch (moedertaal)</li>
-              <li>Nederlands (vloeiend)</li>
-              <li>Engels (redelijk)</li>
+              <li>Arabisch als moedertaal</li>
+              <li>Nederlands vloeiend</li>
+              <li>Engels redelijk</li>
             </ul>
           </div>
         </div>

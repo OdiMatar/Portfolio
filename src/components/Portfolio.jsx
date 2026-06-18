@@ -1,4 +1,4 @@
-﻿import Carousel from './Carousel';
+import Carousel from './Carousel';
 
 const portfolioItems = [
   {
@@ -15,17 +15,14 @@ const portfolioItems = [
     link: 'https://github.com/OdiMatar/PokemonReact'
   },
   {
-    title: 'Jamin Webshop (Laravel)',
-    description: 'Webshop gebouwd met Laravel Blade en live gehost op een VPS.',
-    result: 'Stabiele live deployment met duidelijke productflow en betere contentstructuur.',
+    title: 'Nieuwe website',
+    description: 'Deze plek is vrijgemaakt voor de nieuwe website die ik hierna ga toevoegen.',
+    result: 'Jamin is verwijderd uit mijn portfolio, zodat deze kaart klaarstaat voor mijn nieuwe project.',
     images: [
-      { src: '/img/Laravel.png', alt: 'Jamin webshop homepage' },
-      { src: '/img/Laravel3.png', alt: 'Jamin webshop productoverzicht' },
-      { src: '/img/Laravel1.png', alt: 'Jamin webshop detailpagina' },
-      { src: '/img/Laravel2.png', alt: 'Jamin webshop checkout flow' }
+      { src: '/img/OdaiLogo.png', alt: 'Logo Odi Matar als tijdelijke afbeelding voor nieuw websiteproject' }
     ],
-    tag: 'Laravel + VPS',
-    link: 'https://github.com/OdiMatar/Project2025-jamin'
+    tag: 'Binnenkort',
+    link: ''
   },
   {
     title: 'OdaiShop',
@@ -50,7 +47,7 @@ export default function Portfolio() {
         <div className="section-header">
           <div>
             <h2>Werk</h2>
-            <p>Een selectie projecten met screenshots en concrete resultaten.</p>
+            <p>Een selectie projecten met screenshots, resultaten en ruimte voor mijn nieuwe website.</p>
           </div>
         </div>
 
@@ -70,9 +67,13 @@ export default function Portfolio() {
               </div>
               <div className="card-footer">
                 <span className="chip">{item.tag}</span>
-                <a href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`Bekijk ${item.title}`}>
-                  Bekijk project &rarr;
-                </a>
+                {item.link ? (
+                  <a href={item.link} target="_blank" rel="noopener noreferrer" aria-label={`Bekijk ${item.title}`}>
+                    Bekijk project &rarr;
+                  </a>
+                ) : (
+                  <span className="soon">Project volgt</span>
+                )}
               </div>
             </article>
           ))}

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Header() {
+export default function Header({ activePage, onNavigate }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,26 +11,42 @@ export default function Header() {
     setMobileMenuOpen(false);
   };
 
+  const goTo = (page) => {
+    onNavigate(page);
+    closeMenu();
+  };
+
+  const goToHomeSection = (event, sectionId) => {
+    event.preventDefault();
+    onNavigate('home');
+    closeMenu();
+
+    window.setTimeout(() => {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }, 0);
+  };
+
   return (
     <header className="header" id="top">
       <div className="container">
         <div className="nav">
-          <a className="brand" href="#top" aria-label="Ga naar boven">
-            <img className="brand-logo" src="/img/OdaiLogo.png" alt="Logo Odi Matar" />
+          <a className="brand" href="#" onClick={(event) => { event.preventDefault(); goTo('home'); }} aria-label="Ga naar home">
+            <span className="brand-logo" aria-hidden="true">OM</span>
             <span>Odi Matar</span>
           </a>
 
           <nav className="nav-desktop" aria-label="Hoofdnavigatie">
             <ul>
-              <li><a href="#werk">Werk</a></li>
-              <li><a href="#over">Over mij</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#" className={activePage === 'home' ? 'active' : ''} onClick={(event) => { event.preventDefault(); goTo('home'); }}>Home</a></li>
+              <li><a href="#frontend" className={activePage === 'frontend' ? 'active' : ''} onClick={(event) => { event.preventDefault(); goTo('frontend'); }}>Frontend</a></li>
+              <li><a href="#backend" className={activePage === 'backend' ? 'active' : ''} onClick={(event) => { event.preventDefault(); goTo('backend'); }}>Backend</a></li>
+              <li><a href="#privacy" className={activePage === 'privacy' ? 'active' : ''} onClick={(event) => { event.preventDefault(); goTo('privacy'); }}>Privacy</a></li>
+              <li><a href="#contact" onClick={(event) => goToHomeSection(event, 'contact')}>Contact</a></li>
             </ul>
           </nav>
 
           <div className="nav-actions">
-            <a className="btn" href="#contact">Samenwerken</a>
+            <a className="btn" href="#contact" onClick={(event) => goToHomeSection(event, 'contact')}>Samenwerken</a>
             <button
               className="btn menu-toggle"
               id="menuToggle"
@@ -45,10 +61,11 @@ export default function Header() {
         </div>
 
         <div className={`mobile-nav ${mobileMenuOpen ? 'open' : ''}`} id="mobileNav" aria-label="Mobiele navigatie">
-          <a href="#werk" onClick={closeMenu}>Werk</a>
-          <a href="#over" onClick={closeMenu}>Over mij</a>
-          <a href="#skills" onClick={closeMenu}>Skills</a>
-          <a href="#contact" onClick={closeMenu}>Contact</a>
+          <a href="#" onClick={(event) => { event.preventDefault(); goTo('home'); }}>Home</a>
+          <a href="#frontend" onClick={(event) => { event.preventDefault(); goTo('frontend'); }}>Frontend</a>
+          <a href="#backend" onClick={(event) => { event.preventDefault(); goTo('backend'); }}>Backend</a>
+          <a href="#privacy" onClick={(event) => { event.preventDefault(); goTo('privacy'); }}>Privacy</a>
+          <a href="#contact" onClick={(event) => goToHomeSection(event, 'contact')}>Contact</a>
         </div>
       </div>
     </header>

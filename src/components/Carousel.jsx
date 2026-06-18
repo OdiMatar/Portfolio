@@ -30,7 +30,7 @@ export default function Carousel({ images }) {
             data-prev
             onClick={() => goTo(currentIndex - 1)}
           >
-            ‹
+            &lsaquo;
           </button>
           <button
             className="carousel-btn next"
@@ -39,7 +39,7 @@ export default function Carousel({ images }) {
             data-next
             onClick={() => goTo(currentIndex + 1)}
           >
-            ›
+            &rsaquo;
           </button>
           <div className="carousel-dots" role="tablist" aria-label="Carousel navigatie" data-dots>
             {images.map((_, i) => (
