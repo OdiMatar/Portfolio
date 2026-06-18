@@ -12,17 +12,19 @@ const portfolioItems = [
       { src: '/img/PokemonRespons.png', alt: 'Pokemon API Explorer responsive weergave' }
     ],
     tag: 'React + API',
-    link: 'https://github.com/OdiMatar/PokemonReact'
+    link: 'https://pokemon-react-lyart-ten.vercel.app/'
   },
   {
-    title: 'Nieuwe website',
-    description: 'Deze plek is vrijgemaakt voor de nieuwe website die ik hierna ga toevoegen.',
-    result: 'Jamin is verwijderd uit mijn portfolio, zodat deze kaart klaarstaat voor mijn nieuwe project.',
+    title: 'Autorijschool Odai',
+    description: 'Dit project bestaat uit twee versies: een volledige Laravel-versie en een React-versie. De React-versie staat tijdelijk online, zodat het project direct bekeken kan worden.',
+    result: 'Een overzichtelijke beheeromgeving voor instructeurs, voertuigen en dagelijkse rijschoolplanning.',
     images: [
-      { src: '/img/OdaiLogo.png', alt: 'Logo Odi Matar als tijdelijke afbeelding voor nieuw websiteproject' }
+      { src: '/img/AutorijschoolDashboard.png', alt: 'Dashboard van Autorijschool Odai' },
+      { src: '/img/AutorijschoolInstructeurs.png', alt: 'Overzicht van instructeurs in dienst' },
+      { src: '/img/AutorijschoolVoertuigen.png', alt: 'Overzicht van alle lesvoertuigen' }
     ],
-    tag: 'Binnenkort',
-    link: ''
+    tag: 'Laravel + React',
+    link: 'https://auto-rijschool.vercel.app/'
   },
   {
     title: 'OdaiShop',
@@ -36,7 +38,7 @@ const portfolioItems = [
       { src: '/img/OdaiRespons.png', alt: 'OdaiShop responsive weergave' }
     ],
     tag: 'React + Fetch API',
-    link: 'https://github.com/OdiMatar/OdaiShop'
+    link: 'https://odai-shop.vercel.app/'
   }
 ];
 
@@ -47,7 +49,7 @@ export default function Portfolio() {
         <div className="section-header">
           <div>
             <h2>Werk</h2>
-            <p>Een selectie projecten met screenshots, resultaten en ruimte voor mijn nieuwe website.</p>
+            <p>Een selectie van mijn projecten met live demo's, screenshots en behaalde resultaten.</p>
           </div>
         </div>
 
